@@ -1,24 +1,56 @@
-  // Seleciona o elemento do vídeo
-  const video = document.querySelector('iframe');
-
+const video = document.querySelector('#meuvideo');
   // Botão de controle de mudo
   const toggleMuteButton = document.getElementById('toggleMute');
   toggleMuteButton.addEventListener('click', function() {
-      if (video.contentWindow.document.querySelector('video').volume === 0) {
-          video.contentWindow.document.querySelector('video').volume = 1;
+      if (video.muted) {
+          video.muted = false;
           toggleMuteButton.innerText = 'Mudo';
       } else {
-          video.contentWindow.document.querySelector('video').volume = 0;
+          video.muted = true;
           toggleMuteButton.innerText = 'Som';
       }
+
+ 
   });
 
-    // Botão de controle de legenda
+  /*document.addEventListener('DOMContentLoaded', function() {
+    const videoFrame = document.getElementById('meuvideo');
+    const togglePauseButton = document.getElementById('togglePause');
+
+    togglePauseButton.addEventListener('click', function() {
+        const video = videoFrame.contentWindow.document.querySelector('iframe');
+        if (video.paused) {
+            video.play();
+            togglePauseButton.innerText = 'Pause';
+        } else {
+            video.pause();
+            togglePauseButton.innerText = 'Play';
+        }
+    });
+});*/
+
+video = document.getElementById('meuvideo');
+const togglePauseButton = document.getElementById('togglePause');
+
+
+function pausar(){
+    if (video.paused) {
+        video.play();
+        togglePauseButton.innerText = 'Pause';
+    } else {
+        video.pause();
+        togglePauseButton.innerText = 'Play';
+    }
+}
+
+  // Script customizado para controlar ações dos botões
+document.addEventListener('DOMContentLoaded', function() {
+      // Botão de controle de legenda
     const toggleSubtitlesButton = document.getElementById('toggleSubtitles');
     toggleSubtitlesButton.addEventListener('click', function() {
-        // Aqui você pode adicionar a lógica para mostrar ou ocultar as legendas
-        // Por exemplo, você pode adicionar ou remover a classe CSS para exibir as legendas
-        // Ou você pode adicionar lógica para carregar legendas externas e exibi-las no vídeo
-        // Por favor, substitua este comentário com a lógica necessária para controlar as legendas
         console.log('Botão de legenda clicado');
+        // Abre o modal de importação de legendas quando o botão é clicado
+        var myModal = new bootstrap.Modal(document.getElementById('legendModal'));
+        myModal.show();
     });
+  });

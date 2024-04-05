@@ -10,83 +10,88 @@
 </head>
 <body>
 
-    <header>
-      <nav class="navbar bg-white ms-5 me-5">
+<header>
+    <nav class="navbar bg-white ms-5 me-5">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="content/img/logo2.png" alt="logo" width="37" height="50"> <span class="h2">Al hilal Cast</span>
-          </a>
-        
-          <a href="logout.html" class="btn btn-outline-success">Sair</a>
+            <a class="navbar-brand" href="index.html">
+                <img src="content/img/logo2.png" alt="logo" width="37" height="50"> <span class="h2">Al hilal Cast</span>
+            </a>
+            <a href="logout.html" class="btn btn-outline-success">Sair</a>
         </div>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-   <div class="corpo">
-      <div class="corpo1">
-          <img src="content/img/taxinho.jpg" alt="candongueiros" class="candongueiros">
-      </div>
-      <div class="corpo2">
+<div class="corpo">
+    <div class="corpo1">
+        <img src="content/img/taxinho.jpg" alt="candongueiros" class="candongueiros">
+    </div>
+    <div class="corpo2">
         <div class="texto-candongueiro m-5 text-info">
-          <span class="h1">CANDONGUEIRO</span>
-          <p class="h6">
-            Bem-vindos ao Al Hilal Cast, onde narramos histórias de desafios 
-            do dia a dia! No nosso episódio de estreia, mergulharemos na experiência dos estudantes
-            do ISPTEC ao tentar pegar um táxi. 
-          </p>
+            <span class="h1">CANDONGUEIRO</span>
+            <p class="h6">
+                Bem-vindos ao Al Hilal Cast, onde narramos histórias de desafios 
+                do dia a dia! No nosso episódio de estreia, mergulharemos na experiência dos estudantes
+                do ISPTEC ao tentar pegar um táxi. 
+            </p>
 
-          <!-- Adicionando um atributo data-bs-toggle com valor "modal" e um atributo data-bs-target para especificar o id do modal -->
-          <a href="#videoModal" class="btn btn-outline-info watch" data-bs-toggle="modal" data-bs-target="#videoModal">Assistir</a>
+            <!-- Adicionando um atributo data-bs-toggle com valor "modal" e um atributo data-bs-target para especificar o id do modal -->
+            <a href="#videoModal" class="btn btn-outline-info watch" data-bs-toggle="modal" data-bs-target="#videoModal">Assistir</a>
         </div>
-      </div>
-   </div>
-
-   <!-- Modal -
-   <div class="modal modal-fullscreen modal-xl modal-div" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-         <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">CANDONGUEIRO</h5>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-               <!-- Adicione o seu vídeo aqui 
-               <iframe width="100%" height="100%" src="content/videos/6lack.mp4" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-         </div>
-      </div>
-   </div>-->
-
-   <!-- Modal -->
-<div class="modal modal-fullscreen modal-xl modal-div" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-   <div class="modal-dialog">
-       <div class="modal-content">
-           <div class="modal-header">
-               <h5 class="modal-title" id="exampleModalLabel">CANDONGUEIRO</h5>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           </div>
-           <div class="modal-body">
-               <!-- Adicione o seu vídeo aqui -->
-               <iframe width="100%" height="100%" src="content/videos/6lack.mp4" frameborder="0" allowfullscreen></iframe>
-
-               <!-- Botões de controle de vídeo -->
-               <div class="d-flex justify-content-between align-items-center mt-3">
-                   <button class="btn btn-outline-info watch" id="toggleMute">Mudo</button>
-                   <button class="btn btn-outline-info watch" id="toggleSubtitles">Legenda</button>
-               </div>
-           </div>
-           <div class="modal-footer">
-               <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
-           </div>
-       </div>
-   </div>
+    </div>
 </div>
 
+<!-- Modal -->
+<div class="modal modal-fullscreen modal-xl modal-div" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CANDONGUEIRO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
 
-   <script src="js/bootstrap/js/bootstrap.bundle.js"></script>
-   <script src="js/custom.js"></script>
+                <video width="100%" height="100%" allowfullscreen id="meuvideo" controls>
+                    <source src="content/videos/6lack.mp4"/> 
+                    <track src="content/legendas/The Pursuit Of Happyness 2006 BrRip x264.vtt" kind="subtitles" srclang="en"/>
+                </video>    
+                <!-- Botões de controle de vídeo -->
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                    <button class="btn btn-outline-info watch" id="toggleMute">Mudo</button>
+                    <button class="btn btn-outline-info watch" id="togglePause" onclick="pausar()">Pause</button>
+                    <button class="btn btn-outline-info watch" id="toggleSubtitles" data-bs-toggle="modal" data-bs-target="#legendModal">Legenda</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Importação de Legendas -->
+<div class="modal" id="legendModal" tabindex="-1" aria-labelledby="legendModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="legendModalLabel">Importar Legenda</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulário de importação de legendas -->
+                <form id="legendForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="legendFile" class="form-label">Selecione o arquivo de legenda</label>
+                        <input class="form-control" type="file" id="legendFile" name="legendFile">
+                    </div>
+                    <button type="submit" class="btn btn-outline-info watch">Importar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="js/custom.js"></script>
+
 </body>
 </html>
