@@ -1,79 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="content/css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="content/css/meuestilo.css">
     <link rel="icon" href="content/img/logo2.png">
     <title>Al hilal Cast</title>
 </head>
+
 <body>
 
-<header>
-    <nav class="navbar bg-white ms-5 me-5">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="content/img/logo2.png" alt="logo" width="37" height="50"> <span class="h5">Al Hilal - Reportagens Exclusivas</span>
-            </a>
-            <a href="logout.html" class="btn btn-outline-danger">Sair</a>
-        </div>
-    </nav>
-</header>
-
-<div class="corpo">
-    <div class="corpo1">
-        <img src="content/img/taxinho.jpg" alt="candongueiros" class="candongueiros">
-    </div>
-    <div class="corpo2">
-        <div class="texto-candongueiro m-4">
-            <span class="h1 text-primary">Candongueiro da Minha Banda</span><br>
-            <p class="h5" style="text-align: justify;"> Sejam bem-vindos(as) ao nosso canal de podcast. </p>
-            <p class="" style="text-align: justify;"> Para o vídeo aqui apresentado, decidimos fazer uma reportagem sobre uma das maiores e
-                    melhores Instituições de Ensino Superior em Luanda, denominada por Instituto Superior Politécnico de Tecnologias
-                    e Ciências ou simplesmente ISPTEC.
-            </p>
-            <p class="" style="text-align: justify;"> Neste episódio, iremos apresentar a segunda e terrível batalha diária dos estudantes, onde a primeira corresponde ao período lectivo
-                e a segunda, as dificuldades que os mesmos têm para sair da universidade para o conforto das suas casas. </p>
-            </p>
-
-            <!-- Adicionando um atributo data-bs-toggle com valor "modal" e um atributo data-bs-target para especificar o id do modal -->
-            <a href="#videoModal" class="btn btn-primary watch" data-bs-toggle="modal" data-bs-target="#videoModal">Assistir o vídeo</a>
-        </div>
-    </div>
-</div>
-
-<!-- Modal -->
-<div class="modal modal-fullscreen modal-lg modal-div" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Candongueiro da Minha Banda - ISPTEC</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <header>
+        <nav class="navbar bg-white ms-5 me-5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="content/img/logo2.png" alt="logo" width="37" height="50"> <span class="h5">Al Hilal -
+                        Reportagens Exclusivas</span>
+                </a>
+                <a href="logout.html" class="btn btn-outline-danger">Sair</a>
             </div>
-            <div class="modal-body">
+        </nav>
+    </header>
 
-                <video width="100%" height="100%" allowfullscreen id="meuvideo" controls>
-                    <source src="content/videos/6lack.mp4"/> 
-                   
-                </video>    
-                <!-- Botões de controle de vídeo -->
-                <div class="d-flex justify-content-between align-items-center mt-3 botoes">
-                    <button class="btn btn-outline-info watch" id="toggleMute"> <img  class="botaoes" src="content/img/mudo.png" alt="Mudo"> </button>
-                    <button class="btn btn-outline-info watch" id="toggleRecuar"> <img  class="botaoes" src="content/img/recuar.png" alt="Recuar"> </button>
-                    <button class="btn btn-outline-info watch" id="togglePause" onclick="pausar()"> <img class="botaoes" src="content/img/pause.png" alt="Pause"> </button>
-                    <button class="btn btn-outline-info watch" id="toggleAvancar"> <img  class="botaoes" src="content/img/avancar.png" alt="Avançar"> </button>
-                    <button class="btn btn-outline-info watch" id="toggleSubtitles" onclick="activarSubtitles()"> <img  class="botaoes" src="content/img/legendas.png" alt=""> </button>
+    <div class="corpo">
+        <div class="corpo1">
+            <img src="content/img/taxinho.jpg" alt="candongueiros" class="candongueiros">
+        </div>
+        <div class="corpo2">
+            <div class="texto-candongueiro m-4">
+                <span class="h1 text-primary">Candongueiro da Minha Banda</span><br>
+                <p class="h5" style="text-align: justify;"> Sejam bem-vindos(as) ao nosso canal de podcast. </p>
+                <p class="" style="text-align: justify;"> Para o vídeo aqui apresentado, decidimos fazer uma reportagem
+                    sobre uma das maiores e
+                    melhores Instituições de Ensino Superior em Luanda, denominada por Instituto Superior Politécnico de
+                    Tecnologias
+                    e Ciências ou simplesmente ISPTEC.
+                </p>
+                <p class="" style="text-align: justify;"> Neste episódio, iremos apresentar a segunda e terrível batalha
+                    diária dos estudantes, onde a primeira corresponde ao período lectivo
+                    e a segunda, as dificuldades que os mesmos têm para sair da universidade para o conforto das suas
+                    casas. </p>
+                </p>
+
+                <!-- Adicionando um atributo data-bs-toggle com valor "modal" e um atributo data-bs-target para especificar o id do modal -->
+                <a href="#videoModal" class="btn btn-primary watch" data-bs-toggle="modal"
+                    data-bs-target="#videoModal">Assistir o vídeo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal modal-fullscreen modal-lg modal-div" id="videoModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Candongueiro da Minha Banda - ISPTEC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <!-- Updates Incoming-->
+                    <!-- Container do vídeo-->
+                    <div class="video-container">
+                        <img src="content/img/logo.png" id="video-thumbnail">
+
+                        <video id="video">
+                            <!-- Escolha do Vídeo -->
+                            <source src="content/videos/6lack.mp4" type="video/mp4">
+                        </video>
+`
+                        <!-- Controlers container -->
+                        <div class="controls">
+
+                            <!-- Left controller div -->
+                            <div class="left">
+                                <button id="skipminus-5">
+                                    <i class="fa-solid fa-backward"></i>
+                                </button>
+                                <button id="play-pause">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                                <button id="skip-15">
+                                    <i class="fa-solid fa-forward"></i>
+                                </button>
+                            </div>
+
+                            <!-- div for progress bar -->
+                            <div class="video-timer">
+                                <span id="current-time">00:00</span>
+                                <span id="separator">/</span>
+                                <span id="max-duration">00:00</span>
+                            </div>
+                            <div class="playback-line">
+                                <div class="progress-bar"></div>
+                            </div>
+
+                            <!-- Right controller div -->
+                            <div class="right">
+                                <div class="volume-container">
+                                    <div id="mute">
+                                        <i class="fas fa-volume-up"></i>
+                                    </div>
+                                    <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="fechar_modal">Fechar</button>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-            </div>
         </div>
     </div>
-</div>
 
-<!-- Modal de Importação de Legendas 
+    <!-- Modal de Importação de Legendas 
 <div class="modal" id="legendModal" tabindex="-1" aria-labelledby="legendModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -82,7 +129,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Formulário de importação de legendas 
+                 comentario - Formulário de importação de legendas 
                 <form id="legendForm" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="legendFile" class="form-label">Selecione o arquivo de legenda</label>
@@ -95,8 +142,9 @@
     </div>
 </div>-->
 
-<script src="js/bootstrap/js/bootstrap.bundle.js"></script>
-<script src="js/custom.js"></script>
+    <script src="js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
+
 </html>
