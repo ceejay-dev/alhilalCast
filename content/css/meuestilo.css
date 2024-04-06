@@ -19,7 +19,6 @@
 }
 .corpo {
     display: flex;
-    
     max-width: 100%;
     margin: 40px;
     border-radius: 30px;
@@ -54,4 +53,20 @@
 
 #togglePause{
     align-items: center;
+}
+
+span {
+    color: #fff;
+}
+
+.byebye{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.botoes button img.botaoes{
+    width: 10px;
+    height: 10px;
 }
