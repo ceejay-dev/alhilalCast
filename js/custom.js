@@ -21,15 +21,15 @@ const togglePauseButton = document.getElementById('togglePause');
 function pausar(){
     if (video.paused) {
         video.play();
-        togglePauseButton.innerText = 'Pause';
+        //togglePauseButton.innerText = 'Pause';
     } else {
         video.pause();
-        togglePauseButton.innerText = 'Play';
+        //togglePauseButton.innerText = 'Play';
     }
 }
 
 //função para ativar e desativar a legenda
-function toggleSubtitles() {
+function activarSubtitles() {
     var video = document.getElementById('meuvideo');
     var track = document.querySelector('track');
 
@@ -50,4 +50,18 @@ function toggleSubtitles() {
     }
 }
 
+const forward = document.querySelector('#toggleAvancar');
+const backward = document.querySelector('#toggleRecuar');
+
+//função para avançar o vídeo
+forward.addEventListener ("click", function (){
+    const video = document.getElementById('meuvideo');
+    video.currentTime += 20;
+})
+
+//função para recuar o vídeo
+backward.addEventListener ("click", function (){
+    const video = document.getElementById('meuvideo');
+    video.currentTime -= 20;
+})
 
